@@ -9,3 +9,6 @@ function computerSelection(){
         return "scissors";
     }
 }
+//declare function playerSelection with 0 parameters 
+//create variable playerChoice which asks the user to type either rock, paper or scissors 
+//return variable playerChoice with lowercase letters
