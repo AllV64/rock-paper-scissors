@@ -15,7 +15,7 @@ function playerSelection(){
     return playerChoice.toLocaleLowerCase();
 }
 
-function playGame(playerSelected, computerSelected){
+function playRound(playerSelected, computerSelected){
     return (playerSelected !== "rock" 
          && playerSelected !== "paper" 
          && playerSelected !== "scissors"
