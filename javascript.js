@@ -18,8 +18,8 @@ function playerSelection(){
 //declare function playGame with 2 parameters, containing the variables playerSelected and computerSelected
 function playGame(playerSelected, computerSelected){
     return (playerSelected !== "rock" 
-         || playerSelected !== "paper" 
-         || playerSelected !== "scissors"
+         && playerSelected !== "paper" 
+         && playerSelected !== "scissors"
            ) ? `You have entered invalid text. You entred ${playerSelected}.`
          : (playerSelected == "rock" && computerSelected == "scissors" 
          || playerSelected == "paper" && computerSelected == "rock"
