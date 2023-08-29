@@ -15,7 +15,6 @@ function playerSelection(){
     return playerChoice.toLocaleLowerCase();
 }
 
-//declare function playGame with 2 parameters, containing the variables playerSelected and computerSelected
 function playGame(playerSelected, computerSelected){
     return (playerSelected !== "rock" 
          && playerSelected !== "paper" 
@@ -30,10 +29,4 @@ function playGame(playerSelected, computerSelected){
          || computerSelected == "scissors" && playerSelected == "paper"
            ) ? `You lost! ${computerSelected} beats ${playerSelected}` 
          : `It's a tie! ${computerSelected} can't beat ${playerSelected}`;
-//else if the playerSelected is an option that wins over what computerSelected is
-//return string "You won! {playerSelected} beats {computerSelected}"
-//else if the computerSelected is an option that wins over what playerSelected is
-//return string "You lost! {computerSelected} beats {userSelected}"
-//else if the computerSelected and playerSelected is the same
-//return string "It's a tie! {computerSelected} can't beat {playerSelected}"
 }
