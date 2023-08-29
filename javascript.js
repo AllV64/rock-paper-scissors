@@ -1,13 +1,11 @@
 function computerSelection(){
-    let computerChoice = "";
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
     if (randomNumber == 1){
-        computerChoice == "rock";
+        return "rock";
     } else if (randomNumber == 2){
-        computerChoice == "paper";
+        return "paper";
     } else {
-        computerChoice == "scissors";
+        return "scissors";
     }
-    return computerChoice;
 }
