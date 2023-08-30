@@ -31,23 +31,17 @@ function playRound(playerSelected, computerSelected){
          : `It's a tie! ${computerSelected} can't beat ${playerSelected}`;
 }
 
-//Declare function game with 2 parameters containing two variables, playerPoints and computerPoints
-//Create for loop that loops 5 times and create variable i
-//Create variable roundResult containing a function call for playRound 
-//that also takes in two parameters, playerSelection and computerSelection
-//if roundResult contains "invalid text"
-//decrement variable i
-//else if roundResult contains "You won" 
-//increment variable playerPoints
-//else if roundResult contains "You lost"
-//increment variable computerPoints 
-//write roundResult to console
-//end off loop
-//if playerPoints is higher than computerPoints
-//write "The player won. The final score is {playerPoints}-{computerPoints}"
-//else if computerPoints is higher than playerPoints
-//write "The computer won. The final score is {computerPoints}-{playerPoints}"
-//Call the function game with two parameters, 0 and 0
+function game(playerPoints, computerPoints){
+  for (let i = 0; i < 5; i++)
+    let roundResult = playRound(playerSelection(), computerSelection());
+    (/invalid text/.exec(roundResult)) ? i-- : (/You won/.exec(roundResult)) ?
+    playerPoints++ : (/You lost/.exec(roundResult)) ? computerPoints++ :    
+    console.log(roundResult);
+  (playerPoints > computerPoints) ? 
+  console.log(`The player won. The final score is ${playerPoints}-${computerPoints}` ) :
+  console.log(`The computer won. The final score is ${computerPoints}-${playerPoints}` ); 
+}
+game(0, 0);
 
 
 
