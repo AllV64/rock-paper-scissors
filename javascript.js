@@ -36,7 +36,7 @@ function game(playerPoints, computerPoints){
   for (let i = 0; i < 5; i++)
     roundResult = playRound(playerSelection(), computerSelection());
     (/invalid text/.exec(roundResult)) ? i-- : (/You won/.exec(roundResult)) ?
-    playerPoints++ : (/You lost/.exec(roundResult)) ? computerPoints++ : i;    
+    playerPoints++ : (/You lost/.exec(roundResult)) ? computerPoints++ : "";    
     console.log(roundResult);
   (playerPoints > computerPoints) ? 
   console.log(`The player won. The final score is ${playerPoints}-${computerPoints}` ) :
