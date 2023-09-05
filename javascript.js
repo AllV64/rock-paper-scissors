@@ -23,7 +23,7 @@ function playerSelection(){
 
 let playerSelected = "";
 playerSelect.addEventListener('click', () => {
-  platerSelected = playerSelection();
+  playerSelected = playerSelection();
 });
 
 function playRound(playerSelected, computerSelected){
