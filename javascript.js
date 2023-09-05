@@ -10,8 +10,10 @@ function computerSelection(){
     }
 }
 
+let computerSelected = "";
 computerSelect.addEventListener('click', () => {
-  console.log(computerSelection());
+  computerSelected = (computerSelection());
+  return computerSelected;
 });
 
 function playerSelection(){ 
@@ -19,8 +21,9 @@ function playerSelection(){
     return playerChoice.toLocaleLowerCase();
 }
 
+let playerSelected = "";
 playerSelect.addEventListener('click', () => {
-  console.log(playerSelection());
+  platerSelected = playerSelection();
 });
 
 function playRound(playerSelected, computerSelected){
