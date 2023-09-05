@@ -42,6 +42,7 @@ function playRound(playerSelected, computerSelected){
          : `It's a tie! ${computerSelected} can't beat ${playerSelected}`;
 }
 
+let roundMessage = "";
 startRound.addEventListener('click', () => {
   if (playerSelected == "" || computerSelected == ""){
     return;
