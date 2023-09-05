@@ -31,21 +31,7 @@ function playRound(playerSelected, computerSelected){
          : `It's a tie! ${computerSelected} can't beat ${playerSelected}`;
 }
 
-function game(playerPoints, computerPoints){
-  let roundResult = "";
-  for (let i = 0; i < 5; i++){
-    roundResult = playRound(playerSelection(), computerSelection());
-    (/invalid text/.exec(roundResult)) ? i-- : (/You won/.exec(roundResult)) ?
-    playerPoints++ : (/You lost/.exec(roundResult)) ? computerPoints++ : "";    
-    console.log(roundResult);
-  }
-  (playerPoints > computerPoints) ? 
-  console.log(`The player won. The final score is ${playerPoints}-${computerPoints}` ) :
-  (computerPoints > playerPoints) ?
-  console.log(`The computer won. The final score is ${computerPoints}-${playerPoints}` ) :
-  console.log(`It's a tie. The finel score is ${computerPoints}-${playerPoints}`);
-}
-game(0, 0);
+
 
 
 
