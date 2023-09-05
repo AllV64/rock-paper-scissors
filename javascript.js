@@ -43,6 +43,15 @@ function playRound(playerSelected, computerSelected){
 }
 
 startRound.addEventListener('click', () => {
+  if (playerSelected == "" || computerSelected == ""){
+    return;
+  } else if (playerSelected !== "rock" 
+          && playerSelected !== "paper" 
+          && playerSelected !== "scissors"){
+    return;
+  } else {
+    console.log(playRound(playerSelected, computerSelected));
+  }
 });
 
 
