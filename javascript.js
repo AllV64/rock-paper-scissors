@@ -10,10 +10,18 @@ function computerSelection(){
     }
 }
 
+computerSelect.addEventListener('click', () => {
+  console.log(computerSelection());
+});
+
 function playerSelection(){ 
     let playerChoice = prompt("Enter either 'rock', 'paper' or 'scissors' here") 
     return playerChoice.toLocaleLowerCase();
 }
+
+playerSelect.addEventListener('click', () => {
+  console.log(playerSelection());
+});
 
 function playRound(playerSelected, computerSelected){
     return (playerSelected !== "rock" 
