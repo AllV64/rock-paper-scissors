@@ -12,6 +12,9 @@ function computerSelection(){
 
 const playerChoices = document.querySelectorAll('button');
 
+let computerPoints = 0;
+let playerPoints = 0;
+
 playerChoices.forEach((playerChoice) => {
   playerChoice.addEventListener('click', () => {
     roundResult.textContent = playRound(playerChoice.id, computerSelection());
