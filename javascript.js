@@ -13,7 +13,6 @@ function computerSelection(){
 let computerSelected = "";
 computerSelect.addEventListener('click', () => {
   computerSelected = (computerSelection());
-  return computerSelected;
 });
 
 function playerSelection(){ 
