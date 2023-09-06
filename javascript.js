@@ -10,10 +10,10 @@ function computerSelection(){
     }
 }
 
-const buttons = document.querySelectorAll('button');
+const playerChoices = document.querySelectorAll('button');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
+playerChoices.forEach((playerChoice) => {
+  playerChoice.addEventListener('click', () => {
     playRound(playerSelection(), computerSelection())
   });
 });
