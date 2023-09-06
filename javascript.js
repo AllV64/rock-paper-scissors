@@ -50,12 +50,7 @@ function validateChoices(){
 
 let roundMessage = "";
 startRound.addEventListener('click', () => {
-  if (playerSelected == "" || computerSelected == ""){
-    roundMessage = "One of the opponents has not chosen anything";
-  } else if (playerSelected !== "rock" 
-          && playerSelected !== "paper" 
-          && playerSelected !== "scissors"){
-    roundMessage = `You have entered invalid text. You entred ${playerSelected}.`;
+  if (validateChoices()){
   } else {
     roundMessage = (playRound(playerSelected, computerSelected));
   }
