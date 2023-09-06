@@ -10,6 +10,13 @@ function computerSelection(){
     }
 }
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+  });
+});
+
 function playerSelection(){ 
     let playerChoice = prompt("Enter either 'rock', 'paper' or 'scissors' here") 
     return playerChoice.toLocaleLowerCase();
