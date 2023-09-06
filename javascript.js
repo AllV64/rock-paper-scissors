@@ -18,10 +18,6 @@ playerChoices.forEach((playerChoice) => {
   });
 });
 
-function playerSelection(){ 
-    let playerChoice = prompt("Enter either 'rock', 'paper' or 'scissors' here") 
-    return playerChoice.toLocaleLowerCase();
-}
 
 function playRound(playerSelected, computerSelected){
     if (playerSelected == computerSelected){
