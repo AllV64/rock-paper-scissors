@@ -18,9 +18,17 @@ let playerPoints = 0;
 playerChoices.forEach((playerChoice) => {
   playerChoice.addEventListener('click', () => {
     roundResult.textContent = playRound(playerChoice.id, computerSelection());
+    givePoints();
   });
 });
 
+function givePoints(){
+  if (/You won/.exec(roundResult.textContent)){
+    playerPoints += 1;
+  } else if (/You lost/.exec(roundResult.textContent)){
+    computerPoints += 1;
+  }
+}
 
 function playRound(playerSelected, computerSelected){
     if (playerSelected == computerSelected){
