@@ -48,13 +48,14 @@ function validateChoices(){
   return roundMessage;
 }
 
+const roundResult = document.querySelector('#results');
 let roundMessage = "";
 startRound.addEventListener('click', () => {
   if (validateChoices()){
   } else {
     roundMessage = (playRound(playerSelected, computerSelected));
   }
-  return roundMessage;
+  roundResult.textContent = roundMessage;
 });
 
 
