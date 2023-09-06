@@ -10,20 +10,10 @@ function computerSelection(){
     }
 }
 
-let computerSelected = "";
-computerSelect.addEventListener('click', () => {
-  computerSelected = (computerSelection());
-});
-
 function playerSelection(){ 
     let playerChoice = prompt("Enter either 'rock', 'paper' or 'scissors' here") 
     return playerChoice.toLocaleLowerCase();
 }
-
-let playerSelected = "";
-playerSelect.addEventListener('click', () => {
-  playerSelected = playerSelection();
-});
 
 function playRound(playerSelected, computerSelected){
     if (playerSelected == computerSelected){
@@ -37,28 +27,8 @@ function playRound(playerSelected, computerSelected){
     }
 }
 
-function validateChoices(){
-  if (playerSelected == "" || computerSelected == ""){
-    roundMessage = "One of the opponents has not chosen anything";
-  } else if (playerSelected !== "rock" 
-          && playerSelected !== "paper" 
-          && playerSelected !== "scissors"){
-    roundMessage = `You have entered invalid text. You entred ${playerSelected}.`;
-  } else {
-    roundMessage = "";
-  }
-  return roundMessage;
-}
-
 const roundResult = document.querySelector('#results');
-let roundMessage = "";
-startRound.addEventListener('click', () => {
-  if (validateChoices()){
-  } else {
-    roundMessage = (playRound(playerSelected, computerSelected));
-  }
-  roundResult.textContent = roundMessage;
-});
+
 
 
 
