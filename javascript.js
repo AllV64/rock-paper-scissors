@@ -23,13 +23,20 @@ playerChoices.forEach((playerChoice) => {
   });
 });
 
+function resetScore(){
+  playerPoints = 0;
+  computerPoints = 0;
+}
+
 function playGame(){
   if (playerPoints == 5){
     runningScoreAndWinner.textContent = `The player is the winner! The final 
     score is ${playerPoints}-${computerPoints}`
+    resetScore();
   } else if (computerPoints == 5){
     runningScoreAndWinner.textContent = `The computer is the winner! The final
     score is ${playerPoints}-${computerPoints}`
+    resetScore();
   } else {
     runningScoreAndWinner.textContent = `The score is ${playerPoints}-${computerPoints}`
   }
