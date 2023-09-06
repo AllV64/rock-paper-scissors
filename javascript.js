@@ -19,8 +19,21 @@ playerChoices.forEach((playerChoice) => {
   playerChoice.addEventListener('click', () => {
     roundResult.textContent = playRound(playerChoice.id, computerSelection());
     givePoints();
+    playGame();
   });
 });
+
+function playGame(){
+  if (playerPoints == 5){
+    runningScoreAndWinner.textContent = `The player is the winner! The final 
+    score is ${playerPoints}-${computerPoints}`
+  } else if (computerPoints == 5){
+    runningScoreAndWinner.textContent = `The computer is the winner! The final
+    score is ${playerPoints}-${computerPoints}`
+  } else {
+    runningScoreAndWinner.textContent = `The score is ${playerPoints}-${computerPoints}`
+  }
+}
 
 function givePoints(){
   if (/You won/.exec(roundResult.textContent)){
