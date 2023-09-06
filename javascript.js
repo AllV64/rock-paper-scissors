@@ -44,6 +44,8 @@ function validateChoices(){
           && playerSelected !== "paper" 
           && playerSelected !== "scissors"){
     roundMessage = `You have entered invalid text. You entred ${playerSelected}.`;
+  } else {
+    roundMessage = "";
   }
   return roundMessage;
 }
