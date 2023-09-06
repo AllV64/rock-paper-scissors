@@ -14,7 +14,7 @@ const playerChoices = document.querySelectorAll('button');
 
 playerChoices.forEach((playerChoice) => {
   playerChoice.addEventListener('click', () => {
-    playRound(playerSelection(), computerSelection())
+    playRound(playerChoice.id, computerSelection());
   });
 });
 
