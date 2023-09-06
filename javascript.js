@@ -42,6 +42,7 @@ function playRound(playerSelected, computerSelected){
     }
 }
 
+const runningScoreAndWinner = document.querySelector('#score')
 const roundResult = document.querySelector('#results');
 
 
