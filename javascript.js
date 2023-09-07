@@ -52,12 +52,15 @@ function givePoints(){
 
 function playRound(playerSelected, computerSelected){
     if (playerSelected == computerSelected){
-      return `It's a tie! ${computerSelected} can't beat ${playerSelected}`;
+      roundResult.style.cssText = 'color: orange;';
+      return `It's a tie! ${computerSelected} can't beat ${playerSelected}`; 
     } else if (playerSelected == "rock" && computerSelected == "scissors" 
             || playerSelected == "paper" && computerSelected == "rock"
             || playerSelected == "scissors" && computerSelected == "paper"){
+      roundResult.style.cssText = 'color: green;';
       return `You won! ${playerSelected} beats ${computerSelected}`;
     } else {
+      roundResult.style.cssText = 'color: red;';
       return `You lost! ${computerSelected} beats ${playerSelected}` 
     }
 }
