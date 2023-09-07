@@ -1,13 +1,13 @@
 function computerSelection(){
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    if (randomNumber == 1){
-        return "rock";
-    } else if (randomNumber == 2){
-        return "paper";
-    } else {
-        return "scissors";
-    }
+  if (randomNumber == 1){
+      return "rock";
+  } else if (randomNumber == 2){
+      return "paper";
+  } else {
+      return "scissors";
+  }
 }
 
 const playerChoices = document.querySelectorAll('button');
@@ -51,18 +51,18 @@ function givePoints(){
 }
 
 function playRound(playerSelected, computerSelected){
-    if (playerSelected == computerSelected){
-      roundResult.style.cssText = 'color: orange;';
-      return `It's a tie! ${computerSelected} can't beat ${playerSelected}`; 
-    } else if (playerSelected == "rock" && computerSelected == "scissors" 
-            || playerSelected == "paper" && computerSelected == "rock"
-            || playerSelected == "scissors" && computerSelected == "paper"){
-      roundResult.style.cssText = 'color: green;';
-      return `You won! ${playerSelected} beats ${computerSelected}`;
-    } else {
-      roundResult.style.cssText = 'color: red;';
-      return `You lost! ${computerSelected} beats ${playerSelected}` 
-    }
+  if (playerSelected == computerSelected){
+    roundResult.style.cssText = 'color: orange;';
+    return `It's a tie! ${computerSelected} can't beat ${playerSelected}`; 
+  } else if (playerSelected == "rock" && computerSelected == "scissors" 
+          || playerSelected == "paper" && computerSelected == "rock"
+          || playerSelected == "scissors" && computerSelected == "paper"){
+    roundResult.style.cssText = 'color: green;';
+    return `You won! ${playerSelected} beats ${computerSelected}`;
+  } else {
+    roundResult.style.cssText = 'color: red;';
+    return `You lost! ${computerSelected} beats ${playerSelected}` 
+  }
 }
 
 const runningScoreAndWinner = document.querySelector('#score')
